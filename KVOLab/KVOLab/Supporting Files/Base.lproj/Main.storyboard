@@ -7,39 +7,48 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile-->
+        <!--Users-->
         <scene sceneID="rS7-gl-3JC">
             <objects>
-                <viewController id="OqK-tt-cNo" customClass="ProfileViewController" customModule="KVOLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OqK-tt-cNo" customClass="UsersViewController" customModule="KVOLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dSf-m9-KTa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDD-kv-Rex">
-                                <rect key="frame" x="20" y="94" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="QIz-YX-fi8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PBa-bU-7bR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userCell" id="DQb-ax-YHf">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DQb-ax-YHf" id="M3i-3p-499">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="HDD-kv-Rex" firstAttribute="top" secondItem="76v-Ik-7s7" secondAttribute="top" constant="50" id="4pv-mw-aDS"/>
-                            <constraint firstItem="76v-Ik-7s7" firstAttribute="trailing" secondItem="HDD-kv-Rex" secondAttribute="trailing" constant="20" id="Ejb-9w-GBM"/>
-                            <constraint firstItem="HDD-kv-Rex" firstAttribute="leading" secondItem="76v-Ik-7s7" secondAttribute="leading" constant="20" id="jOq-b2-d1p"/>
+                            <constraint firstItem="PBa-bU-7bR" firstAttribute="bottom" secondItem="76v-Ik-7s7" secondAttribute="bottom" id="1Qj-Zi-Y71"/>
+                            <constraint firstItem="PBa-bU-7bR" firstAttribute="leading" secondItem="76v-Ik-7s7" secondAttribute="leading" id="O5c-uI-P88"/>
+                            <constraint firstItem="PBa-bU-7bR" firstAttribute="top" secondItem="76v-Ik-7s7" secondAttribute="top" id="jPP-Fy-g7h"/>
+                            <constraint firstItem="PBa-bU-7bR" firstAttribute="trailing" secondItem="76v-Ik-7s7" secondAttribute="trailing" id="jVe-Y1-mFC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="76v-Ik-7s7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="weV-LH-mr8"/>
+                    <tabBarItem key="tabBarItem" title="Users" id="weV-LH-mr8"/>
+                    <connections>
+                        <outlet property="tableView" destination="PBa-bU-7bR" id="Wkr-Pi-3sk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bi-ss-I3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1668.1159420289857" y="397.76785714285711"/>
         </scene>
-        <!--Deposit/Withdrawl-->
+        <!--Deposit/ Withdrewl-->
         <scene sceneID="4ZY-ph-QcV">
             <objects>
                 <viewController id="za7-J5-Wy7" customClass="DepositViewController" customModule="KVOLab" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,36 +56,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deposit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etc-oq-w1F">
-                                <rect key="frame" x="20" y="94" width="374" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Vay-dO-qcd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ML5-f7-uDL">
-                                <rect key="frame" x="20" y="197" width="221" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-2U-Uzh">
-                                <rect key="frame" x="300" y="211" width="94" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stepper>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wQZ-iP-3MD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="accountCell" id="Pvn-GI-r7D">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pvn-GI-r7D" id="Cl2-3m-PXY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Etc-oq-w1F" firstAttribute="leading" secondItem="nLh-Al-3Z3" secondAttribute="leading" constant="20" id="2w3-Rb-bx9"/>
-                            <constraint firstItem="nLh-Al-3Z3" firstAttribute="trailing" secondItem="Etc-oq-w1F" secondAttribute="trailing" constant="20" id="Npc-vc-1nF"/>
-                            <constraint firstItem="Etc-oq-w1F" firstAttribute="top" secondItem="nLh-Al-3Z3" secondAttribute="top" constant="50" id="tX0-f8-t8D"/>
+                            <constraint firstItem="wQZ-iP-3MD" firstAttribute="top" secondItem="nLh-Al-3Z3" secondAttribute="top" id="Gkf-eI-fYV"/>
+                            <constraint firstItem="wQZ-iP-3MD" firstAttribute="bottom" secondItem="nLh-Al-3Z3" secondAttribute="bottom" id="LuW-4Z-hwI"/>
+                            <constraint firstItem="wQZ-iP-3MD" firstAttribute="leading" secondItem="nLh-Al-3Z3" secondAttribute="leading" id="QJt-dJ-zin"/>
+                            <constraint firstItem="wQZ-iP-3MD" firstAttribute="trailing" secondItem="nLh-Al-3Z3" secondAttribute="trailing" id="wPt-0Z-xKz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nLh-Al-3Z3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Deposit/Withdrawl" id="yDx-zs-gkB"/>
+                    <tabBarItem key="tabBarItem" title="Deposit/ Withdrewl" id="yDx-zs-gkB"/>
+                    <connections>
+                        <outlet property="tableView" destination="wQZ-iP-3MD" id="1gU-Bc-Bux"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sm0-f8-ibN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,9 +142,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpy-Zx-gQd">
-                                <rect key="frame" x="165.5" y="425.5" width="83" height="45"/>
+                                <rect key="frame" x="84.5" y="425.5" width="245" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Submit"/>
+                                <state key="normal" title="Create Bank Account"/>
+                                <connections>
+                                    <action selector="balanceTextField:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4QN-Fh-pfE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -157,6 +167,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create " id="vwR-e7-C2o"/>
+                    <connections>
+                        <outlet property="balanceTextField" destination="lgh-iK-h7P" id="Vb5-1J-fOJ"/>
+                        <outlet property="userNameTextField" destination="YLr-hM-k7u" id="wQl-Pg-pLy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

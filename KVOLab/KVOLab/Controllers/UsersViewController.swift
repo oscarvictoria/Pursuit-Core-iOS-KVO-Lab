@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProfileViewController.swift
 //  KVOLab
 //
 //  Created by Oscar Victoria Gonzalez  on 4/7/20.
@@ -8,13 +8,16 @@
 
 import UIKit
 
-class CreateUserViewController: UIViewController {
+class UsersViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
-
-
     
-}
 
+
+}

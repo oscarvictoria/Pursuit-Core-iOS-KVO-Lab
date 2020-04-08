@@ -14,7 +14,8 @@
 		BEC8787C243D63D100B96AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC8787B243D63D100B96AF7 /* Assets.xcassets */; };
 		BEC8787F243D63D100B96AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC8787D243D63D100B96AF7 /* LaunchScreen.storyboard */; };
 		BEC87887243D67D400B96AF7 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87886243D67D400B96AF7 /* DepositViewController.swift */; };
-		BEC87889243D67EE00B96AF7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87888243D67EE00B96AF7 /* ProfileViewController.swift */; };
+		BEC87889243D67EE00B96AF7 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87888243D67EE00B96AF7 /* UsersViewController.swift */; };
+		BEC878BE243E504A00B96AF7 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC878BD243E504A00B96AF7 /* Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		BEC8787E243D63D100B96AF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC87880243D63D100B96AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC87886243D67D400B96AF7 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
-		BEC87888243D67EE00B96AF7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BEC87888243D67EE00B96AF7 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		BEC878BD243E504A00B96AF7 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,42 @@
 		BEC87871243D63D000B96AF7 /* KVOLab */ = {
 			isa = PBXGroup;
 			children = (
-				BEC87872243D63D000B96AF7 /* AppDelegate.swift */,
-				BEC87874243D63D000B96AF7 /* SceneDelegate.swift */,
-				BEC87876243D63D000B96AF7 /* CreateUserViewController.swift */,
-				BEC87886243D67D400B96AF7 /* DepositViewController.swift */,
-				BEC87888243D67EE00B96AF7 /* ProfileViewController.swift */,
-				BEC87878243D63D000B96AF7 /* Main.storyboard */,
-				BEC8787B243D63D100B96AF7 /* Assets.xcassets */,
-				BEC8787D243D63D100B96AF7 /* LaunchScreen.storyboard */,
+				BEC878BC243E503200B96AF7 /* Models */,
+				BEC878BB243E501700B96AF7 /* Supporting Files */,
+				BEC878BA243E4FFF00B96AF7 /* Controllers */,
 				BEC87880243D63D100B96AF7 /* Info.plist */,
 			);
 			path = KVOLab;
+			sourceTree = "<group>";
+		};
+		BEC878BA243E4FFF00B96AF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEC87876243D63D000B96AF7 /* CreateUserViewController.swift */,
+				BEC87886243D67D400B96AF7 /* DepositViewController.swift */,
+				BEC87888243D67EE00B96AF7 /* UsersViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BEC878BB243E501700B96AF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEC8787D243D63D100B96AF7 /* LaunchScreen.storyboard */,
+				BEC8787B243D63D100B96AF7 /* Assets.xcassets */,
+				BEC87878243D63D000B96AF7 /* Main.storyboard */,
+				BEC87874243D63D000B96AF7 /* SceneDelegate.swift */,
+				BEC87872243D63D000B96AF7 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEC878BC243E503200B96AF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BEC878BD243E504A00B96AF7 /* Users.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +173,9 @@
 			files = (
 				BEC87877243D63D000B96AF7 /* CreateUserViewController.swift in Sources */,
 				BEC87887243D67D400B96AF7 /* DepositViewController.swift in Sources */,
-				BEC87889243D67EE00B96AF7 /* ProfileViewController.swift in Sources */,
+				BEC87889243D67EE00B96AF7 /* UsersViewController.swift in Sources */,
 				BEC87873243D63D000B96AF7 /* AppDelegate.swift in Sources */,
+				BEC878BE243E504A00B96AF7 /* Users.swift in Sources */,
 				BEC87875243D63D000B96AF7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
