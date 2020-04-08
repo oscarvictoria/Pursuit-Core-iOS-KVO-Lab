@@ -15,7 +15,7 @@
 		BEC8787F243D63D100B96AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC8787D243D63D100B96AF7 /* LaunchScreen.storyboard */; };
 		BEC87887243D67D400B96AF7 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87886243D67D400B96AF7 /* DepositViewController.swift */; };
 		BEC87889243D67EE00B96AF7 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC87888243D67EE00B96AF7 /* UsersViewController.swift */; };
-		BEC878BE243E504A00B96AF7 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC878BD243E504A00B96AF7 /* Users.swift */; };
+		BEC878BE243E504A00B96AF7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC878BD243E504A00B96AF7 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		BEC87880243D63D100B96AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC87886243D67D400B96AF7 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
 		BEC87888243D67EE00B96AF7 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
-		BEC878BD243E504A00B96AF7 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		BEC878BD243E504A00B96AF7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 		BEC878BC243E503200B96AF7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BEC878BD243E504A00B96AF7 /* Users.swift */,
+				BEC878BD243E504A00B96AF7 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 				BEC87887243D67D400B96AF7 /* DepositViewController.swift in Sources */,
 				BEC87889243D67EE00B96AF7 /* UsersViewController.swift in Sources */,
 				BEC87873243D63D000B96AF7 /* AppDelegate.swift in Sources */,
-				BEC878BE243E504A00B96AF7 /* Users.swift in Sources */,
+				BEC878BE243E504A00B96AF7 /* User.swift in Sources */,
 				BEC87875243D63D000B96AF7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

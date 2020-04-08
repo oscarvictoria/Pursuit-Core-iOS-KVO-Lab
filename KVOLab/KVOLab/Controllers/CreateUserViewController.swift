@@ -13,22 +13,30 @@ class CreateUserViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var balanceTextField: UITextField!
     
+    var users = [User]() {
+        didSet {
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFields()
     }
     
-
     private func configureTextFields() {
         userNameTextField.delegate = self
         balanceTextField.delegate = self
     }
 
-    @IBAction func balanceTextField(_ sender: UIButton) {
-        
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        guard let userName = userNameTextField.text,
+            !userName.isEmpty,
+            let balance = balanceTextField.text,
+            !balance.isEmpty else { return }
+        User.shared.userName = userName
+        User.shared.balance = Double(balance)!
     }
-    
     
 }
 
